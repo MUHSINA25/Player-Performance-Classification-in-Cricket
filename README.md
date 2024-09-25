@@ -2,12 +2,34 @@
 
 ## Overview
 This project aims to develop a classification model to identify the "Man of the Match" in Indian Premier League (IPL) cricket matches based on player performance metrics. The goal is to use data-driven insights to make accurate predictions.
+## Dataset Information
+### Source
+- **Link**: [IPL Data till 2017](https://data.world/mkhuzaima/ipl-data-till-2017)
 
-## Dataset
-The dataset used for this project includes various features related to player performance, match details, and historical data. Key attributes include:
-- **Player Statistics**: Runs scored, wickets taken, strike rate, etc.
-- **Match Information**: Venue, opponent, match type, etc.
-- **Awards**: Man of the Match designations.
+### Table: Player_match.csv
+- **Player_match_SK**: Unique identifier for the player match.
+- **PlayerMatch_key**: Key for the player-match combination.
+- **Match_Id**: Unique identifier for the match.
+- **Player_Id**: Player's ID.
+- **Player_Name**: Player's name.
+- **DOB**: Date of birth.
+- **Batting_hand**: Batting hand of the player.
+- **Bowling_skill**: Bowling skill of the player.
+- **Country_Name**: Player's country.
+- **Role_Desc**: Player's role in the match (e.g., bowler, batsman).
+- **Player_team**: Team the player belongs to.
+- **Opposit_Team**: Opponent team.
+- **Season_year**: Year of the match.
+- **is_manofThematch**: Target variable - whether the player was "Man of the Match."
+- **Age_As_on_match**: Player's age during the match.
+- **IsPlayers_Team_won**: Whether the player's team won the match.
+- **Batting_Status**: Player's batting status in the match.
+- **Bowling_Status**: Player's bowling status in the match.
+- **Player_Captain**: Whether the player was the captain in the match.
+- **Opposit_captain**: Opponent team's captain.
+- **Player_keeper**: Whether the player was the wicketkeeper in the match.
+- **Opposit_keeper**: Opponent team's wicketkeeper.
+
 
 ## Problem Statement
 The primary objective is to classify players as the "Man of the Match" or not based on their performances in different matches. This classification problem will utilize machine learning techniques to create an effective model.
@@ -19,25 +41,57 @@ The primary objective is to classify players as the "Man of the Match" or not ba
    - Logistic Regression
    - Support Vector Machine (SVM)
    - AdaBoost
-4. **Model Evaluation**: Assessing the model's performance using metrics like accuracy, precision, recall, and F1-score.
+   - MLP Classifier
+   - Naive Bayes
+   - Random Forest
+   - K-Nearest Neighbors
+   - Gradient Boost
+##  Model Evaluation and Steps
+
+- **Classification Metrics**: Evaluate model performance using metrics such as:
+  - Confusion Matrix
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
+  - ROC Curve
+
+- **Hyperparameter Tuning**: Optimize model performance by adjusting hyperparameters.
+
+- **Save the Model**: Save the trained model for future use.
+
+- **Test with Unseen Data**: Assess the model's performance on data it hasn't encountered before.
+
+
 
 ## Results
 - **Best Performing Model**: SVM, Logistic Regression, and AdaBoost achieved an accuracy of **76.4%**.
 - **Class Imbalance**: Addressed to improve the model's performance on unseen data.
+## Conclusion
 
-## Future Work
-- Explore deep learning algorithms for potentially higher accuracy.
-- Update the model periodically with new data.
-- Address imbalanced data through resampling techniques.
-- Consider adding more features to enhance predictive power.
+The SVM model achieved 76.4% accuracy in initial tests but dropped to 60% on unseen data. This drop was due to class imbalance in the unseen data, leading to poor classification for class 0. The model favored predicting class 1, resulting in high recall but low precision. The small size of the unseen dataset limited performance assessment, showing the need for a more balanced dataset and further improvements.
+
+
+
+##  Future Work
+- **Explore Deep Learning**: Try neural networks to improve prediction accuracy.
+  
+- **Regular Updates**: Update the model with new player and match data regularly.
+
+- **Fix Class Imbalance**: Use resampling techniques to balance the dataset.
+
+- **Add Features**: Include factors like match location and weather to improve predictions.
+
+- **Cross-Validation**: Implement cross-validation to ensure model robustness.
+
+- **Advanced Feature Engineering**: Create new features that enhance prediction accuracy.
 
 ## Acknowledgments
 I would like to express my gratitude to my mentors and peers for their constant guidance and support throughout this project.
 
-## Installation
-To run this project locally, follow these steps:
-
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/MUHSINA25/Player-Performance-Classification-in-Cricket.git
+
+
 
