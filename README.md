@@ -35,9 +35,9 @@ This project aims to develop a classification model to identify the "Man of the 
 The primary objective is to classify players as the "Man of the Match" or not based on their performances in different matches. This classification problem will utilize machine learning techniques to create an effective model.
 
 ## Methodology
-1. **Data Preprocessing**: Cleaning and preparing the data for analysis.
-2. **Feature Selection**: Identifying the most relevant features for the classification.
-3. **Model Training**: Utilizing various algorithms, including:
+**Data Preprocessing**: Cleaning and preparing the data for analysis.
+**Feature Selection**: Identifying the most relevant features for the classification.
+**Model Training**: Utilizing various algorithms, including:
    - Logistic Regression
    - Support Vector Machine (SVM)
    - AdaBoost
