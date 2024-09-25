@@ -86,8 +86,6 @@ The SVM model achieved 76.4% accuracy in initial tests but dropped to 60% on uns
 
 - **Advanced Feature Engineering**: Create new features that enhance prediction accuracy.
 
-## Acknowledgments
-I would like to express my gratitude to my mentors and peers for their constant guidance and support throughout this project.
 
 1. Clone the repository:
    ```bash
